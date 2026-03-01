@@ -1,0 +1,124 @@
+{
+  "name": "nodekode",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./aws": {
+      "require": "./dist/aws.js",
+      "types": "./dist/aws.d.ts"
+    },
+    "./azure": {
+      "require": "./dist/azure.js",
+      "types": "./dist/azure.d.ts"
+    },
+    "./auth": {
+      "require": "./dist/auth.js",
+      "types": "./dist/auth.d.ts"
+    },
+    "./error": {
+      "require": "./dist/error.js",
+      "types": "./dist/error.d.ts"
+    },
+    "./api": {
+      "require": "./dist/api.js",
+      "types": "./dist/api.d.ts"
+    },
+    "./async": {
+      "require": "./dist/async.js",
+      "types": "./dist/async.d.ts"
+    },
+    "./helpers": {
+      "require": "./dist/helpers.js",
+      "types": "./dist/helpers.d.ts"
+    }
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amirpoudel/nodekode.git"
+  },
+  "homepage": "https://github.com/amirpoudel/nodekode#readme",
+  "bugs": {
+    "url": "https://github.com/amirpoudel/nodekode/issues"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "keywords": [
+    "nodejs",
+    "backend",
+    "error-handler",
+    "express",
+    "s3",
+    "azure",
+    "jwt",
+    "bcrypt",
+    "helpers",
+    "typescript"
+  ],
+  "author": "amirpoudel",
+  "license": "MIT",
+  "description": "Zero-friction Node.js backend toolkit — error handling, file storage, auth utilities, and helpers in one place.",
+  "dependencies": {
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "@aws-sdk/client-s3": "^3.1000.0",
+    "@aws-sdk/s3-request-presigner": "^3.1000.0",
+    "@azure/storage-blob": "^12.31.0",
+    "@types/bcrypt": "^5.0.2",
+    "@types/express": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.0",
+    "@types/multer": "^1.4.11",
+    "@types/winston": "^2.4.4",
+    "bcrypt": "^6.0.0",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.1.0",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "@aws-sdk/client-s3": ">=3",
+    "@aws-sdk/s3-request-presigner": ">=3",
+    "@azure/storage-blob": ">=12",
+    "bcrypt": ">=5",
+    "express": ">=4",
+    "jsonwebtoken": ">=9",
+    "multer": ">=1"
+  },
+  "peerDependenciesMeta": {
+    "@aws-sdk/client-s3": {
+      "optional": true
+    },
+    "@aws-sdk/s3-request-presigner": {
+      "optional": true
+    },
+    "@azure/storage-blob": {
+      "optional": true
+    },
+    "bcrypt": {
+      "optional": true
+    },
+    "express": {
+      "optional": true
+    },
+    "jsonwebtoken": {
+      "optional": true
+    },
+    "multer": {
+      "optional": true
+    }
+  }
+}
